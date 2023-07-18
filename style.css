@@ -8,12 +8,33 @@
 }
 
 /* shared styles */
-header {
+header,
+.banner-content {
     width: 80%;
     margin: 0 auto;
 }
-.d-flex{
+
+.d-flex {
     display: flex;
+}
+
+.btn {
+    padding: 10px 25px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #F948B2;
+}
+
+.btn-secondary {
+    background-color: #4EC5F7;
 }
 
 
@@ -21,14 +42,17 @@ header {
 nav {
     justify-content: space-between;
     padding: 20px 0;
-    border: 1px solid black;
 }
-.logo, nav ul {
+
+.logo,
+nav ul {
     align-items: center;
 }
+
 .logo h3 {
     font-size: 40px;
 }
+
 nav ul li {
     list-style: none;
     color: #3C354F;
@@ -36,21 +60,71 @@ nav ul li {
     font-weight: 500;
     margin: 0 10px;
 }
+
 nav ul li:first-child {
     margin-left: 0;
 }
+
 nav ul li:last-child {
     border-radius: 5px;
     background: rgba(11, 2, 35, 0.10);
     padding: 10px 20px;
     margin-right: 0;
 }
+
 nav ul li a {
     text-decoration: none;
     color: #3C354F;
 }
 
 /* banner section styles */
+#banner {
+    background-image: url("./images/Group14.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.banner-content {
+    align-items: center;
+}
+
+.banner-texts,
+.banner-image {
+    width: 50%;
+}
+
+.banner-texts h2 {
+    color: #0B0223;
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.banner-texts h1 {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.banner-texts ul {
+    margin-bottom: 1rem;
+}
+
+.banner-texts ul li {
+    list-style: none;
+    color: #534C64;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.banner-image img {
+    display: inline-block;
+    width: 100%;
+}
 
 /* about section styles */
 
@@ -67,29 +141,102 @@ nav ul li a {
     body {
         background-color: #FFFFFF;
     }
+
+    .btn {
+        border-radius: 35px;
+        font-size: 18px;
+    }
+
     /* navbar */
-    nav, nav ul {
+    nav,
+    nav ul {
         flex-direction: column;
         gap: 20px;
     }
+
     .logo {
         justify-content: center;
+    }
+
+    /* banner */
+    #banner {
+        background: none;
+    }
+
+    .banner-content {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .banner-texts,
+    .banner-image {
+        width: 100%;
+    }
+
+    .banner-texts {
+        background-image: url("./images/Group14.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3rem 2rem;
+    }
+
+    .banner-texts h2 {
+        font-size: 35px;
+    }
+
+    .banner-texts h1 {
+        font-size: 70px;
+    }
+
+    .banner-texts ul li {
+        font-size: 18px;
     }
 }
 
 /* medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
+
     /* navbar */
     nav {
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
+
+    /* banner */
+    #banner {
+        background: none;
+    }
+
+    .banner-content {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .banner-texts,
+    .banner-image {
+        width: 100%;
+    }
+
+    .banner-texts {
+        background-image: url("./images/Group14.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3rem 0;
+    }
+
+    .banner-texts h2 {
+        font-size: 35px;
+    }
+
+    .banner-texts h1 {
+        font-size: 70px;
+    }
+
+    .banner-texts ul li {
+        font-size: 18px;
+    }
 }
 
 /* medium devices (laptops) */
 @media screen and (min-width: 769px) and (max-width: 992px) {}
-
-/* body {
-    background-color: lightgray;
-} */

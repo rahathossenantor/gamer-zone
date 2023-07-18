@@ -9,7 +9,8 @@
 
 /* shared styles */
 header,
-.banner-content {
+.banner-content,
+#about {
     width: 80%;
     margin: 0 auto;
 }
@@ -35,6 +36,24 @@ header,
 
 .btn-secondary {
     background-color: #4EC5F7;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #534C64;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 15px;
 }
 
 
@@ -127,6 +146,35 @@ nav ul li a {
 }
 
 /* about section styles */
+.about-content {
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-image {
+    width: 60%;
+}
+
+.about-texts {
+    width: 40%;
+    text-align: right;
+}
+
+.about-image img {
+    display: inline-block;
+    width: 100%;
+}
+
+.purpose {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #534C64;
+}
+.quote {
+    color: #534C64;
+    font-size: 25px;
+}
 
 /* features section styles */
 
@@ -138,6 +186,7 @@ nav ul li a {
 /* media queries for responsiveness */
 /* small (mobiles) devices */
 @media screen and (max-width: 576px) {
+    /* shared */
     body {
         background-color: #FFFFFF;
     }
@@ -147,15 +196,27 @@ nav ul li a {
         font-size: 18px;
     }
 
+    .section-title {
+        font-size: 40px;
+    }
+
+    .section-description {
+        line-height: 24px;
+    }
+
     /* navbar */
     nav,
-    nav ul {
+    nav ul, .about-content {
         flex-direction: column;
         gap: 20px;
     }
 
     .logo {
         justify-content: center;
+    }
+
+    .logo img {
+        width: 70px;
     }
 
     /* banner */
@@ -191,16 +252,32 @@ nav ul li a {
     .banner-texts ul li {
         font-size: 18px;
     }
+
+    /* about */
+    .about-image, .about-texts {
+        width: 100%;
+    }
+    
+    .about-texts {
+        text-align: center;
+    }
+    .quote {
+        font-size: 22px;
+    }
 }
 
 /* medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
 
     /* navbar */
-    nav {
+    nav, .about-content {
         flex-direction: column;
         gap: 15px;
         align-items: center;
+    }
+
+    .logo img {
+        width: 70px;
     }
 
     /* banner */
@@ -236,7 +313,13 @@ nav ul li a {
     .banner-texts ul li {
         font-size: 18px;
     }
-}
 
-/* medium devices (laptops) */
-@media screen and (min-width: 769px) and (max-width: 992px) {}
+    /* about */
+    .about-image, .about-texts {
+        width: 100%;
+    }
+    
+    .about-texts {
+        text-align: center;
+    }
+}

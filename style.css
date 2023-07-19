@@ -10,7 +10,9 @@
 /* shared styles */
 header,
 .banner-content,
-#about, .games-content {
+#about,
+.games-content,
+.features-content {
     width: 80%;
     margin: 0 auto;
 }
@@ -182,6 +184,7 @@ nav ul li a {
     font-size: 18px;
     color: #534C64;
 }
+
 .quote {
     color: #534C64;
     font-size: 25px;
@@ -191,14 +194,17 @@ nav ul li a {
 .games-content {
     padding: 50px 0;
 }
+
 .games-text {
     text-align: center;
 }
+
 .games-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
+
 .game-image img {
     width: 100%;
     display: inline-block;
@@ -207,6 +213,7 @@ nav ul li a {
 .game-image {
     position: relative;
 }
+
 .game-image-overlay {
     position: absolute;
     top: 0;
@@ -220,20 +227,89 @@ nav ul li a {
     transform: scale(0);
     transition: all linear 0.3s;
 }
-.game-image:hover .game-image-overlay{
+
+.game-image:hover .game-image-overlay {
     transform: scale(1);
     transition: all linear 0.3s;
 }
+
 .game-image-overlay div {
     flex-direction: column;
 }
+
 .game-image-overlay img {
     width: 40px;
     cursor: pointer;
 }
+
 .game-image-overlay p {
     color: #F948B2;
     font-size: 20px;
+}
+
+/* features section styles */
+.features-content {
+    padding: 30px 0;
+}
+
+.first-row-container,
+.second-row-container {
+    align-items: center;
+}
+
+.features-text {
+    width: 40%;
+    text-align: right;
+}
+
+.features-img {
+    width: 60%;
+}
+
+.image-container {
+    justify-content: flex-end;
+}
+
+.float-image-parent,
+.float-image-parent-two {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+}
+
+.float-image-parent>img,
+.float-image-parent-two>img {
+    display: inline-block;
+    width: 100%;
+}
+
+.float-image {
+    position: absolute;
+    bottom: -70px;
+    left: -110px;
+    width: 230px;
+}
+
+.float-image img,
+.float-image-two img {
+    display: inline-block;
+    width: 100%;
+}
+
+.second-row {
+    margin-top: 100px;
+}
+
+.features-text-two {
+    width: 40%;
+    text-align: left;
+}
+
+.float-image-two {
+    position: absolute;
+    bottom: -70px;
+    right: -110px;
+    width: 250px;
 }
 
 /* careers section styles */
@@ -244,6 +320,7 @@ nav ul li a {
 /* media queries for responsiveness */
 /* small (mobiles) devices */
 @media screen and (max-width: 576px) {
+
     /* shared */
     body {
         background-color: #FFFFFF;
@@ -255,7 +332,7 @@ nav ul li a {
     }
 
     .section-title {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .section-description {
@@ -264,7 +341,8 @@ nav ul li a {
 
     /* navbar */
     nav,
-    nav ul, .about-content {
+    nav ul,
+    .about-content {
         flex-direction: column;
         gap: 20px;
     }
@@ -304,7 +382,7 @@ nav ul li a {
     }
 
     .banner-texts h1 {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .banner-texts ul li {
@@ -312,13 +390,15 @@ nav ul li a {
     }
 
     /* about */
-    .about-image, .about-texts {
+    .about-image,
+    .about-texts {
         width: 100%;
     }
-    
+
     .about-texts {
         text-align: center;
     }
+
     .quote {
         font-size: 22px;
     }
@@ -327,17 +407,69 @@ nav ul li a {
     .games-container {
         grid-template-columns: 1fr;
     }
+
+    /* features */
+    .first-row-container,
+    .second-row-container {
+        flex-direction: column;
+    }
+
+    .first-row-container {
+        margin-bottom: 125px;
+    }
+
+    .features-text,
+    .features-text-two {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .features-img {
+        width: 100%;
+    }
+
+    .image-container,
+    .image-container-two {
+        position: relative;
+    }
+
+    .second-row-container {
+        flex-direction: column-reverse;
+    }
+
+    .float-image-parent,
+    .float-image-parent-two {
+        position: static;
+        width: 85%;
+    }
+
+    .float-image,
+    .float-image-two {
+        width: 165px;
+    }
+
+    .float-image {
+        left: 0;
+    }
+
+    .float-image-two {
+        right: 0;
+    }
 }
 
 /* medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
+
     /* shared */
     .section-title {
         font-size: 45px;
         text-align: center;
     }
+
     /* navbar */
-    nav, .about-content {
+    nav,
+    .about-content {
         flex-direction: column;
         gap: 15px;
         align-items: center;
@@ -382,10 +514,11 @@ nav ul li a {
     }
 
     /* about */
-    .about-image, .about-texts {
+    .about-image,
+    .about-texts {
         width: 100%;
     }
-    
+
     .about-texts {
         text-align: center;
     }
@@ -393,5 +526,49 @@ nav ul li a {
     /* games */
     .games-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* features */
+    .first-row-container,
+    .second-row-container {
+        flex-direction: column;
+    }
+
+    .first-row-container {
+        margin-bottom: 125px;
+    }
+
+    .features-text,
+    .features-text-two {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .features-img {
+        width: 100%;
+    }
+
+    .image-container,
+    .image-container-two {
+        position: relative;
+    }
+
+    .second-row-container {
+        flex-direction: column-reverse;
+    }
+
+    .float-image-parent,
+    .float-image-parent-two {
+        position: static;
+        width: 80%;
+    }
+
+    .float-image {
+        left: 0;
+    }
+
+    .float-image-two {
+        right: 0;
     }
 }

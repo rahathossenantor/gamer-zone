@@ -10,7 +10,7 @@
 /* shared styles */
 header,
 .banner-content,
-#about {
+#about, .games-content {
     width: 80%;
     margin: 0 auto;
 }
@@ -41,11 +41,14 @@ header,
 .section-title {
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.spesial-title {
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
 }
 
 .section-description {
@@ -54,6 +57,14 @@ header,
     font-weight: 400;
     line-height: 25px;
     margin-bottom: 15px;
+}
+
+.text-center {
+    align-items: center;
+}
+
+.text-black {
+    color: black !important;
 }
 
 
@@ -176,7 +187,54 @@ nav ul li a {
     font-size: 25px;
 }
 
-/* features section styles */
+/* games section styles */
+.games-content {
+    padding: 50px 0;
+}
+.games-text {
+    text-align: center;
+}
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.game-image img {
+    width: 100%;
+    display: inline-block;
+}
+
+.game-image {
+    position: relative;
+}
+.game-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 7px);
+    width: calc(100% - 3px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: 3px solid #F948B2;
+    justify-content: center;
+    transform: scale(0);
+    transition: all linear 0.3s;
+}
+.game-image:hover .game-image-overlay{
+    transform: scale(1);
+    transition: all linear 0.3s;
+}
+.game-image-overlay div {
+    flex-direction: column;
+}
+.game-image-overlay img {
+    width: 40px;
+    cursor: pointer;
+}
+.game-image-overlay p {
+    color: #F948B2;
+    font-size: 20px;
+}
 
 /* careers section styles */
 
@@ -264,11 +322,20 @@ nav ul li a {
     .quote {
         font-size: 22px;
     }
+
+    /* games */
+    .games-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
+    /* shared */
+    .section-title {
+        font-size: 45px;
+        text-align: center;
+    }
     /* navbar */
     nav, .about-content {
         flex-direction: column;
@@ -321,5 +388,10 @@ nav ul li a {
     
     .about-texts {
         text-align: center;
+    }
+
+    /* games */
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

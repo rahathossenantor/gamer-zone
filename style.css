@@ -382,7 +382,9 @@ nav ul li a {
 
 .category:hover {
     border: 1px solid #FF42A5;
+    color: #FF42A5;
     padding: 5px 5px;
+    cursor: pointer;
 }
 
 .category img {

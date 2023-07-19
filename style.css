@@ -12,11 +12,13 @@ header,
 .banner-content,
 #about,
 .games-content,
-.features-content {
+.features-content, .career-content {
     width: 80%;
     margin: 0 auto;
 }
-
+ul li {
+    list-style: none;
+}
 .d-flex {
     display: flex;
 }
@@ -147,7 +149,6 @@ nav ul li a {
 }
 
 .banner-texts ul li {
-    list-style: none;
     color: #534C64;
     font-size: 20px;
     font-weight: 500;
@@ -313,6 +314,41 @@ nav ul li a {
 }
 
 /* careers section styles */
+#career {
+    background-color: #FF42A5;
+    margin: 100px 0 50px 0;
+}
+.career-content {
+    align-items: center;
+    color: white;
+    padding: 50px 0;
+}
+.career-text, .career-image {
+    width: 50%;
+}
+
+.career-content p {
+    color: white;
+    margin-bottom: 30px;
+}
+.roles {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.career-content li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.career-content button {
+    color: #FF42A5;
+}
+.right {
+    text-align: right;
+}
+.career-image img {
+    display: inline-block;
+    width: 100%;
+}
 
 /* footer section styles */
 
@@ -336,14 +372,33 @@ nav ul li a {
     }
 
     .section-description {
-        line-height: 24px;
+        line-height: 22px;
+    }
+    nav,
+    nav ul,
+    .about-content,
+    .first-row-container,
+    .second-row-container,
+    .career-content {
+        flex-direction: column;
+    }
+
+    .banner-texts,
+    .banner-image,
+    .about-image,
+    .about-texts,
+    .features-text,
+    .features-text-two,
+    .features-img,
+    .career-text,
+    .career-image {
+        width: 100%;
     }
 
     /* navbar */
     nav,
     nav ul,
     .about-content {
-        flex-direction: column;
         gap: 20px;
     }
 
@@ -363,11 +418,6 @@ nav ul li a {
     .banner-content {
         flex-direction: column-reverse;
         gap: 40px;
-    }
-
-    .banner-texts,
-    .banner-image {
-        width: 100%;
     }
 
     .banner-texts {
@@ -390,11 +440,6 @@ nav ul li a {
     }
 
     /* about */
-    .about-image,
-    .about-texts {
-        width: 100%;
-    }
-
     .about-texts {
         text-align: center;
     }
@@ -409,24 +454,14 @@ nav ul li a {
     }
 
     /* features */
-    .first-row-container,
-    .second-row-container {
-        flex-direction: column;
-    }
-
     .first-row-container {
         margin-bottom: 125px;
     }
 
     .features-text,
     .features-text-two {
-        width: 100%;
         text-align: center;
         margin-bottom: 2rem;
-    }
-
-    .features-img {
-        width: 100%;
     }
 
     .image-container,
@@ -456,6 +491,11 @@ nav ul li a {
     .float-image-two {
         right: 0;
     }
+
+    /* career */
+    .career-content {
+        gap: 40px;
+    }
 }
 
 /* medium devices (tablets) */
@@ -466,11 +506,24 @@ nav ul li a {
         font-size: 45px;
         text-align: center;
     }
+    nav,
+    .about-content, .first-row-container,
+    .second-row-container, .career-content {
+        flex-direction: column;
+    }
+    .banner-texts,
+    .banner-image, .about-image,
+    .about-texts, .features-text,
+    .features-text-two,
+    .features-img,
+    .career-text,
+    .career-image {
+        width: 100%;
+    }
 
     /* navbar */
     nav,
     .about-content {
-        flex-direction: column;
         gap: 15px;
         align-items: center;
     }
@@ -487,11 +540,6 @@ nav ul li a {
     .banner-content {
         flex-direction: column-reverse;
         gap: 40px;
-    }
-
-    .banner-texts,
-    .banner-image {
-        width: 100%;
     }
 
     .banner-texts {
@@ -514,11 +562,6 @@ nav ul li a {
     }
 
     /* about */
-    .about-image,
-    .about-texts {
-        width: 100%;
-    }
-
     .about-texts {
         text-align: center;
     }
@@ -529,24 +572,14 @@ nav ul li a {
     }
 
     /* features */
-    .first-row-container,
-    .second-row-container {
-        flex-direction: column;
-    }
-
     .first-row-container {
         margin-bottom: 125px;
     }
 
     .features-text,
     .features-text-two {
-        width: 100%;
         text-align: center;
         margin-bottom: 2rem;
-    }
-
-    .features-img {
-        width: 100%;
     }
 
     .image-container,
@@ -570,5 +603,10 @@ nav ul li a {
 
     .float-image-two {
         right: 0;
+    }
+
+    /* career */
+    .career-content {
+        gap: 50px;
     }
 }

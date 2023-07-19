@@ -12,7 +12,7 @@ header,
 .banner-content,
 #about,
 .games-content,
-.features-content, .career-content {
+.features-content, .career-content, .category-content {
     width: 80%;
     margin: 0 auto;
 }
@@ -350,6 +350,29 @@ nav ul li a {
     width: 100%;
 }
 
+/* category section styles */
+.category-content {
+    padding-bottom: 50px;
+}
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+.category {
+    align-items: center;
+    border-radius: 35px;
+    padding: 6px 6px;
+}
+.category:hover {
+    border: 1px solid #FF42A5;
+    padding: 5px 5px;
+}
+.category img {
+    width: 40px;
+    margin-right: 10px;
+}
+
 /* footer section styles */
 
 
@@ -496,6 +519,15 @@ nav ul li a {
     .career-content {
         gap: 40px;
     }
+
+    /* category */
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .category:last-child {
+        display: none;
+    }
 }
 
 /* medium devices (tablets) */
@@ -608,5 +640,11 @@ nav ul li a {
     /* career */
     .career-content {
         gap: 50px;
+    }
+
+    /* category */
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 }

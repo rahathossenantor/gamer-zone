@@ -12,13 +12,18 @@ header,
 .banner-content,
 #about,
 .games-content,
-.features-content, .career-content, .category-content {
+.features-content,
+.career-content,
+.category-content,
+.footer-content {
     width: 80%;
     margin: 0 auto;
 }
+
 ul li {
     list-style: none;
 }
+
 .d-flex {
     display: flex;
 }
@@ -318,12 +323,15 @@ nav ul li a {
     background-color: #FF42A5;
     margin: 100px 0 50px 0;
 }
+
 .career-content {
     align-items: center;
     color: white;
     padding: 50px 0;
 }
-.career-text, .career-image {
+
+.career-text,
+.career-image {
     width: 50%;
 }
 
@@ -331,20 +339,25 @@ nav ul li a {
     color: white;
     margin-bottom: 30px;
 }
+
 .roles {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
 .career-content li {
     font-size: 16px;
     margin-bottom: 5px;
 }
+
 .career-content button {
     color: #FF42A5;
 }
+
 .right {
     text-align: right;
 }
+
 .career-image img {
     display: inline-block;
     width: 100%;
@@ -354,26 +367,87 @@ nav ul li a {
 .category-content {
     padding-bottom: 50px;
 }
+
 .category-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
 }
+
 .category {
     align-items: center;
     border-radius: 35px;
     padding: 6px 6px;
 }
+
 .category:hover {
     border: 1px solid #FF42A5;
     padding: 5px 5px;
 }
+
 .category img {
     width: 40px;
     margin-right: 10px;
 }
 
 /* footer section styles */
+footer {
+    background-color: #0B0223;
+    color: white;
+}
+
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-content li {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.footer-content li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation-links,
+.social-links,
+.useful-links {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+}
+
+.navigation-links,
+.social-links {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.useful-links {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.navigation-links {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.social-links {
+    font-size: 30px;
+}
+
+.useful-links li,
+.copyright-text {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+}
 
 
 /* media queries for responsiveness */
@@ -397,6 +471,7 @@ nav ul li a {
     .section-description {
         line-height: 22px;
     }
+
     nav,
     nav ul,
     .about-content,
@@ -525,8 +600,34 @@ nav ul li a {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+
     .category:last-child {
         display: none;
+    }
+
+    /* footer */
+    .footer-content {
+        padding: 50px 0;
+    }
+
+    .navigation-links,
+    .social-links,
+    .useful-links {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-content li {
+        margin-bottom: 5px;
+        padding: 5px 15px;
+    }
+
+    .copyright-text {
+        text-align: center;
     }
 }
 
@@ -538,14 +639,20 @@ nav ul li a {
         font-size: 45px;
         text-align: center;
     }
+
     nav,
-    .about-content, .first-row-container,
-    .second-row-container, .career-content {
+    .about-content,
+    .first-row-container,
+    .second-row-container,
+    .career-content {
         flex-direction: column;
     }
+
     .banner-texts,
-    .banner-image, .about-image,
-    .about-texts, .features-text,
+    .banner-image,
+    .about-image,
+    .about-texts,
+    .features-text,
     .features-text-two,
     .features-img,
     .career-text,
